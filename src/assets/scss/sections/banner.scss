@@ -1,0 +1,111 @@
+.banner {
+  position: relative;
+  padding: 20px 10px;
+  background-color: $white;
+  border-radius: 10px;
+  color: $black;
+  overflow: hidden;
+  margin-bottom: 10px;
+  &::before, &--advice::before {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+  }
+  @include tablet-min {
+    padding: 30px 40px 35px 40px;
+    &::before {
+      background-image: url('../img/bg_girl_and_fire.png');
+      background-position: right bottom;
+    }
+    &--advice::before {
+      background-image: url('../img/bg_doctor.png');
+      background-position: center center;
+    }
+  }
+  @include tablet-landscape-min {
+    padding-right: 40%;
+    &--advice {
+      padding-right: 38%;
+    }
+  }
+  .doctor {
+    position: absolute;
+    right: -60px;
+    bottom: 0;
+    top: 0;
+    width: 536px;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    @include tablet-min {
+      background-image: url('../img/doctor.png');
+    }
+    @include tablet-landscape-min {
+      background-size: 111%;
+    }
+  }
+  &__subtitle {
+    position: relative;
+    font-family: $font-PTSansNarrow;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px $white;
+    text-align: center;
+    @include tablet-min {
+      font-size: 3rem;//48px
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    span {
+      color: $orange;
+    }
+  }
+  &__text {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 1.06rem;//17px
+    line-height: 1.5;
+    text-shadow: 0 1px $white;
+  }
+  &--advice__text {
+    font-size: 1rem;
+  }
+  &__footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablet-min {
+      justify-content: flex-start;
+    }
+    &__name {
+      font-style: italic;
+      font-weight: 700;
+    }
+    &__signature {
+      position: relative;
+      width: 185px;
+      height: 64px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include tablet-min {
+        margin-left: 60px;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

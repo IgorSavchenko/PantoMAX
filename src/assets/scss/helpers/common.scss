@@ -1,0 +1,21 @@
+//common styles
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  background-color: $black;
+  color: $white;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+body {
+  font-family: $font-PTSans;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
